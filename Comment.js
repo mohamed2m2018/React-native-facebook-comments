@@ -28,4 +28,7 @@ Comment.propTypes = {
     ownerAvatar: PropTypes.string,
     content: PropTypes.string.isRequired,
   }),
+  backgroundColor:PropTypes.string,
+  textColor:PropTypes.string,
+
 };
