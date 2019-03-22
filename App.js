@@ -12,7 +12,31 @@ export default class App extends React.Component {
             ownerName: 'salah',
             ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
             content:
-              'hi, I am salah',
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+          }}
+        />
+        <Comment
+          commentData={{
+            ownerName: 'salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+          }}
+        />
+        <Comment
+          commentData={{
+            ownerName: 'salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+          }}
+        />
+        <Comment
+          commentData={{
+            ownerName: 'salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
           }}
         />
       </View>
@@ -24,7 +48,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent:'center'
-  
+    justifyContent: 'center',
   },
 });

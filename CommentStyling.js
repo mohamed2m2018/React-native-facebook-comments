@@ -1,32 +1,28 @@
 import { StyleSheet } from 'react-native';
 
-export default styles=StyleSheet.create({
+export default (styles = StyleSheet.create({
+  mainWrapper: {
+    flexDirection: 'row',
+    marginRight: '5%',
+    marginBottom:20
+  },
 
+  image: {
+    width: 50,
+    height: 50,
+    marginRight:10,
+    marginLeft:10
+  },
 
-    mainWrapper:{
+  wrapper: {
+    flex:1,
+    height: 'auto',
+    backgroundColor: 'grey',
+    borderRadius: 15,
+    alignSelf: 'flex-start',
+  },
 
-    },
-
-    image:{
-        width:50,
-        height:50
-    },
-
-
-    wrapper:{
-        marginLeft:'20%',
-        marginRight:'5%',
-        height:'auto',
-        backgroundColor:'grey',
-        borderRadius:15,
-        alignSelf:'flex-start'
-       
-    },
-
-    content:{
-        padding:10,
-    }
-
-    
-
-})
+  content: {
+    padding: 10,
+  },
+}));

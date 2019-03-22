@@ -12,7 +12,7 @@ export default class Comment extends Component {
     const { content, ownerAvatar } = commentData;
 
     return (
-      <View>
+      <View style={commentStyling.mainWrapper}>
         <Image style={commentStyling.image} source={{ uri: ownerAvatar }} />
         <View style={commentStyling.wrapper}>
           <Text style={commentStyling.content}>{content}</Text>
