@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 import colors from './colors';
 
 export default (styles = StyleSheet.create({
+
   mainWrapper: {
     flexDirection: 'row',
     marginRight: '5%',
@@ -25,5 +26,11 @@ export default (styles = StyleSheet.create({
 
   content: {
     padding: 10,
+    paddingTop:4
   },
+  commentOwner:{
+      padding:10,
+      paddingBottom:0
+
+},  
 }));
