@@ -26,11 +26,12 @@ export default (styles = StyleSheet.create({
 
   content: {
     padding: 10,
-    paddingTop:4
+    paddingTop:3
   },
   commentOwner:{
       padding:10,
-      paddingBottom:0
+      paddingBottom:0,
+      fontWeight:'bold'
 
 },  
 }));
