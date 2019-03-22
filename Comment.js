@@ -27,8 +27,14 @@ Comment.propTypes = {
     ownerName: PropTypes.string,
     ownerAvatar: PropTypes.string,
     content: PropTypes.string.isRequired,
+    replies: PropTypes.arrayOf(
+      PropTypes.shape({
+        ownerName: PropTypes.string,
+        ownerAvatar: PropTypes.string,
+        content: PropTypes.string.isRequired,
+      })
+    ),
   }),
-  backgroundColor:PropTypes.string,
-  textColor:PropTypes.string,
-
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
 };
