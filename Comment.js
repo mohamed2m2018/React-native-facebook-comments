@@ -1,28 +1,39 @@
 import React, { Component } from 'react';
 
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image,ScrollView } from 'react-native';
 
 import PropTypes from 'prop-types';
 
 import commentStyling from './CommentStyling';
 
 export default class Comment extends Component {
+  renderReplies = (replies) => {
+    return replies.map((reply, index) => (
+      <View key={index} style={commentStyling.mainWrapper}>
+        <Image style={commentStyling.replyImage} source={{ uri: reply.ownerAvatar }} />
+        <View style={commentStyling.wrapper}>
+          <Text style={commentStyling.commentOwner}>{reply.ownerName}</Text>
+          <Text style={commentStyling.content}>{reply.content}</Text>
+        </View>
+      </View>
+    ));
+  };
+
   render() {
     const { commentData } = this.props;
     const { content, ownerName, ownerAvatar, replies } = commentData;
 
     return (
-      <View style={commentStyling.mainWrapper}>
-        <Image style={commentStyling.image} source={{ uri: ownerAvatar }} />
-        <View style={commentStyling.wrapper}>
-          <Text style={commentStyling.commentOwner}>{ownerName}</Text>
-          <Text style={commentStyling.content}>{content}</Text>
-        </View>
-        {replies ? (
+      <View>
+        <View style={commentStyling.mainWrapper}>
+          <Image style={commentStyling.image} source={{ uri: ownerAvatar }} />
           <View style={commentStyling.wrapper}>
+            <Text style={commentStyling.commentOwner}>{ownerName}</Text>
             <Text style={commentStyling.content}>{content}</Text>
           </View>
-        ) : null}
+        </View>
+        {replies ? this.renderReplies(replies) : null}
+
       </View>
     );
   }

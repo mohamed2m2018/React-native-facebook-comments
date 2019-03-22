@@ -2,22 +2,29 @@ import { StyleSheet } from 'react-native';
 import colors from './colors';
 
 export default (styles = StyleSheet.create({
-
   mainWrapper: {
     flexDirection: 'row',
     marginRight: '5%',
-    marginBottom:20
+    marginBottom: 20,
+    marginTop:10
   },
 
-  image: {
+ image: {
     width: 50,
     height: 50,
+    marginRight: 10,
+    marginLeft: 10,
+  },
+
+  replyImage: {
+    width: 20,
+    height: 20,
     marginRight:10,
-    marginLeft:10
+    marginLeft:70 //10 3alshmal+50 elsora 2lly 3alshmal+10
   },
 
   wrapper: {
-    flex:1,
+    flex: 1,
     height: 'auto',
     backgroundColor: 'grey',
     borderRadius: 15,
@@ -26,12 +33,11 @@ export default (styles = StyleSheet.create({
 
   content: {
     padding: 10,
-    paddingTop:3
+    paddingTop: 3,
   },
-  commentOwner:{
-      padding:10,
-      paddingBottom:0,
-      fontWeight:'bold'
-
-},  
+  commentOwner: {
+    padding: 10,
+    paddingBottom: 0,
+    fontWeight: 'bold',
+  },
 }));
