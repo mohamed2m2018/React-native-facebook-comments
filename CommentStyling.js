@@ -5,11 +5,9 @@ export default (styles = StyleSheet.create({
   mainWrapper: {
     flexDirection: 'row',
     marginRight: '5%',
-    marginBottom: 20, //between each post
-    marginTop:10
   },
 
- image: {
+  image: {
     width: 50,
     height: 50,
     marginRight: 10,
@@ -19,8 +17,8 @@ export default (styles = StyleSheet.create({
   replyImage: {
     width: 20,
     height: 20,
-    marginRight:10,
-    marginLeft:70 //10 3alshmal+50 elsora 2lly 3alshmal+10
+    marginRight: 10,
+    marginLeft: 70, //10 3alshmal+50 elsora 2lly 3alshmal+10
   },
 
   wrapper: {
@@ -39,5 +37,20 @@ export default (styles = StyleSheet.create({
     padding: 10,
     paddingBottom: 0,
     fontWeight: 'bold',
+  },
+  commentFooter: {
+    flexDirection: 'row',
+    marginLeft: 80,
+    marginBottom: 19, //between each post
+
+  },
+  replyFooter:{
+    flexDirection: 'row',
+    marginLeft: 110,
+    marginBottom: 19, //between each post
+
+  },
+  footerElement: {
+    marginRight: 10,
   },
 }));

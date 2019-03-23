@@ -14,30 +14,36 @@ export default class App extends React.Component {
               ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
               content:
                 'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+              date: '13h ',
+
               replies: [
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
               ],
             }}
@@ -48,6 +54,7 @@ export default class App extends React.Component {
               ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
               content:
                 'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+              date: '13h ',
             }}
           />
           <Comment
@@ -56,6 +63,7 @@ export default class App extends React.Component {
               ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
               content:
                 'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+              date: '13h ',
             }}
           />
 
@@ -65,30 +73,35 @@ export default class App extends React.Component {
               ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
               content:
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.,',
+              date: '13h ',
               replies: [
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
                 {
                   ownerName: 'Mohamed Salah',
                   ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
                   content:
                     'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+                  date: '13h ',
                 },
               ],
             }}
