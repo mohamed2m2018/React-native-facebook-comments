@@ -47,7 +47,7 @@ export default (styles = StyleSheet.create({
   replyFooter:{
     flexDirection: 'row',
     marginLeft: 110,
-    marginBottom: 19, //between each post
+    marginBottom: 0, //between each post
 
   },
   footerElement: {
