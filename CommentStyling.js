@@ -52,5 +52,10 @@ export default (styles = StyleSheet.create({
   },
   footerElement: {
     marginRight: 10,
+    
   },
+  footerElementLiked:{
+    marginRight:10,
+    color:'#2F8DFD'
+  }
 }));
