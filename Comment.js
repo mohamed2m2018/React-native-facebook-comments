@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { View, Text, Image, TouchableHighlight } from 'react-native';
+import { View, Text, Image, TouchableOpacity} from 'react-native';
 
 import PropTypes from 'prop-types';
 
@@ -12,6 +12,12 @@ export default class Comment extends Component {
   state = {
     likedNow: false,
   };
+
+  onPressLike=()=>{
+    this.setState({
+      likedNow:!this.state.likedNow,
+    })
+  }
 
   renderReplies = (replies) => {
     return replies.map((reply, index) => (
@@ -40,18 +46,18 @@ export default class Comment extends Component {
 
           {console.log(displayLike)}
           {(displayLike||likedNow) ? (
-            <TouchableHighlight onPress={this.onPress}>
+            <TouchableOpacity onPress={this.onPressLike}>
               <Text style={commentStyling.footerElementLiked}>Like</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           ) : (
-            <TouchableHighlight onPress={this.onPress}>
+            <TouchableOpacity onPress={this.onPressLike}>
               <Text style={commentStyling.footerElement}>Like</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           )}
 
-          <TouchableHighlight onPress={this.onPress}>
+          <TouchableOpacity onPress={this.onPress}>
             <Text style={commentStyling.footerElement}>Reply</Text>
-          </TouchableHighlight>
+          </TouchableOpacity>
         </View>
         {replies ? this.renderReplies(replies) : null}
       </View>

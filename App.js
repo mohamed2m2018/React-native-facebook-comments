@@ -4,10 +4,10 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Comment from './Comment';
 
 export default class App extends React.Component {
-  displayLikeCondition = (i) => {
-    //for example if current user id equals liked by array returns true
-
-    if (i===1) return true;
+  displayLikeCondition = (likersArray) => {
+    //check if liker id equals to current user id
+    founded = likersArray.filter((liker) => liker === 1);
+    if (founded.length) return true;
     else return false;
   };
 
@@ -54,7 +54,7 @@ export default class App extends React.Component {
                 },
               ],
             }}
-            displayLike={this.displayLikeCondition(1)}
+            displayLike={this.displayLikeCondition([1, 2, 3])}
           />
           <Comment
             commentData={{
