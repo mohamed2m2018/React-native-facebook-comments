@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, TextInput, View, ScrollView } from 'react-native';
 
 import Comment from './Comment';
 
@@ -114,7 +114,11 @@ export default class App extends React.Component {
               ],
             }}
           />
+          
         </ScrollView>
+        <TextInput
+          placeholder='hi please write comment'
+        />
       </View>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
 
 import PropTypes from 'prop-types';
 
@@ -20,10 +20,7 @@ export default class Comment extends Component {
     });
   };
 
-
-  onPressReply=()=>{
-
-  };
+  onPressReply = () => {};
 
   onPressLike = () => {
     this.setState({
@@ -40,7 +37,7 @@ export default class Comment extends Component {
   };
 
   render() {
-    const { commentData} = this.props;
+    const { commentData } = this.props;
     const { content, ownerName, ownerAvatar, replies, date } = commentData;
     const { liked } = this.state;
 
@@ -71,6 +68,8 @@ export default class Comment extends Component {
           </TouchableOpacity>
         </View>
         {replies ? this.renderReplies(replies) : null}
+
+     
       </View>
     );
   }
