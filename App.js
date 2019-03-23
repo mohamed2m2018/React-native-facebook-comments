@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, ScrollView } from 'react-native';
-
-import Comment from './Comment';
+import { StyleSheet, TextInput, View } from 'react-native';
+import CommentsList from './CommentsList';
 
 export default class App extends React.Component {
   displayLikeCondition = (likersArray) => {
@@ -11,113 +10,98 @@ export default class App extends React.Component {
     else return false;
   };
 
+  data = [
+    {
+      key: '1',
+      commentData: {
+        ownerName: 'Mohamed Salah',
+        ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+        content:
+          'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+        date: '13h ',
+
+        replies: [
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+        ],
+      },
+    },
+    {
+      key: '2',
+      commentData: {
+        ownerName: 'Mohamed Salah',
+        ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+        content:
+          'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+        date: '13h ',
+
+        replies: [
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+          {
+            ownerName: 'Mohamed Salah',
+            ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+            content:
+              'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+            date: '13h ',
+          },
+        ],
+      },
+    },
+  ];
+
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView>
-          <Comment
-            commentData={{
-              ownerName: 'Mohamed Salah',
-              ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-              content:
-                'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-              date: '13h ',
-
-              replies: [
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-              ],
-            }}
-            displayLike={this.displayLikeCondition([1, 2, 3])}
-          />
-          <Comment
-            commentData={{
-              ownerName: 'Ahmed Lashin',
-              ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-              content:
-                'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-              date: '13h ',
-            }}
-          />
-          <Comment
-            commentData={{
-              ownerName: 'Kamal Hossam',
-              ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-              content:
-                'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-              date: '13h ',
-            }}
-          />
-
-          <Comment
-            commentData={{
-              ownerName: 'Kamal Hisham',
-              ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-              content:
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.,',
-              date: '13h ',
-              replies: [
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-                {
-                  ownerName: 'Mohamed Salah',
-                  ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-                  content:
-                    'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-                  date: '13h ',
-                },
-              ],
-            }}
-          />
-          
-        </ScrollView>
+        <CommentsList data={this.data} />
         <TextInput
-          placeholder='hi please write comment'
+          style={{ justifyContent: 'flex-end', bottom: 0 }}
+          placeholder="hi please write comment"
         />
       </View>
     );
