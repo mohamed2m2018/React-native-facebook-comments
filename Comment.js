@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { View, Text, Image, TouchableOpacity} from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import PropTypes from 'prop-types';
 
@@ -10,14 +10,26 @@ import Reply from './Reply';
 
 export default class Comment extends Component {
   state = {
-    likedNow: false,
+    liked: false,
   };
 
-  onPressLike=()=>{
+  componentWillMount = () => {
+    const { displayLike } = this.props;
     this.setState({
-      likedNow:!this.state.likedNow,
-    })
-  }
+      liked: displayLike,
+    });
+  };
+
+
+  onPressReply=()=>{
+
+  };
+
+  onPressLike = () => {
+    this.setState({
+      liked: !this.state.liked,
+    });
+  };
 
   renderReplies = (replies) => {
     return replies.map((reply, index) => (
@@ -28,9 +40,9 @@ export default class Comment extends Component {
   };
 
   render() {
-    const { commentData,displayLike } = this.props;
-    const { content, ownerName, ownerAvatar, replies, date} = commentData;
-    const { likedNow } = this.state;
+    const { commentData} = this.props;
+    const { content, ownerName, ownerAvatar, replies, date } = commentData;
+    const { liked } = this.state;
 
     return (
       <View>
@@ -44,8 +56,7 @@ export default class Comment extends Component {
         <View style={commentStyling.commentFooter}>
           <Text style={commentStyling.footerElement}>{date}</Text>
 
-          {console.log(displayLike)}
-          {(displayLike||likedNow) ? (
+          {liked ? (
             <TouchableOpacity onPress={this.onPressLike}>
               <Text style={commentStyling.footerElementLiked}>Like</Text>
             </TouchableOpacity>
@@ -83,5 +94,5 @@ Comment.propTypes = {
   }),
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
-  displayLike:PropTypes.bool
+  displayLike: PropTypes.bool,
 };
