@@ -16,16 +16,16 @@ export default class CommentsList extends Component {
   state = { text: '' };
 
   addComment = () => {
-    let { data, onAddComment } = this.props;
+    let { data, onAddComment,currentUser } = this.props;
     const { text } = this.state;
     const newcomment = {
-      ownerName: 'Ananoymus',
-      ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+      ownerName: currentUser.name,
+      ownerAvatar: currentUser.avatar,
       content: text,
       date: '13h ',
       likersIds: [],
     };
-    const randomNumber=`${Math.floor(Math.random() * 100) + 10}`
+    const randomNumber=`${Math.floor(Math.random() * 1000)+Math.floor(Math.random() * 1000) + 10}`
 
     data.push({
       id: randomNumber,
@@ -41,10 +41,10 @@ export default class CommentsList extends Component {
   };
 
   displayLikeCondition = (commentId) => {
-    const { data, currentUserId } = this.props;
+    const { data, currentUser } = this.props;
     let comment = data.filter((comment) => comment.id === commentId);
     //check if liker id equals to current user id
-    let founded = comment[0].likersIds.filter((likerId) => likerId === currentUserId);
+    let founded = comment[0].likersIds.filter((likerId) => likerId === currentUser.id);
 
     if (founded.length) return true;
     else return false;
@@ -112,5 +112,5 @@ CommentsList.propTypes = {
     ),
   }),
   onAddComment: propTypes.func,
-  currentUserId: propTypes.string,
+  currentUser: propTypes.object.isRequired,
 };

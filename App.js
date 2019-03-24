@@ -7,27 +7,25 @@ export default class App extends React.Component {
     data: [
       {
         id: '1',
- 
-          ownerName: 'Mohamed Salah',
-          ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-          content:
-            'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-          date: '13h ',
-          likersIds:['1','2','3']
-     
+
+        ownerName: 'Mohamed Salah',
+        ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+        content:
+          'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+        date: '13h ',
+        likersIds: ['1', '2', '3'],
       },
       {
         id: '2',
-      
-          ownerName: 'Mohamed Salah',
-          ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
-          content:
-            'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
-          date: '13h ',
-          likersIds:['2','3'],
 
+        ownerName: 'Mohamed Salah',
+        ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
+        content:
+          'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
+        date: '13h ',
+        likersIds: ['2', '3'],
 
-          /*replies: [
+        /*replies: [
             {
               ownerName: 'Mohamed Salah',
               ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
@@ -57,8 +55,7 @@ export default class App extends React.Component {
               date: '13h ',
             },
           ],*/
-        },
-    
+      },
     ],
   };
 
@@ -66,12 +63,15 @@ export default class App extends React.Component {
     const { data } = this.state;
     return (
       <View style={styles.container}>
-        <CommentsList 
-        topMargin={50}
-        data={data}
-        onAddComment={()=>console.log('Comment Added')}
-        currentUserId='1'
-
+        <CommentsList
+          topMargin={50}
+          data={data}
+          onAddComment={() => console.log('Comment Added')}
+          currentUser={{
+            id: 1,
+            name: 'Hamada',
+            avatar: 'https://i.imgur.com/2FXmVPb.jpg',
+          }}
         />
       </View>
     );
