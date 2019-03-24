@@ -67,6 +67,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <CommentsList 
+        topMargin={40}
         data={data}
         onAddComment={()=>console.log('Comment Added')}
         currentUserId='1'

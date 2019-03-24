@@ -11,6 +11,7 @@ import commentListStyling from './commentListStyling';
 import propTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+
 export default class CommentsList extends Component {
   state = { text: '' };
 
@@ -24,8 +25,10 @@ export default class CommentsList extends Component {
       date: '13h ',
       likersIds: [],
     };
+    const randomNumber=`${Math.floor(Math.random() * 100) + 10}`
+
     data.push({
-      id: Math.floor(Math.random() * 100) + 10, // returns a random integer from 0 to 99
+      id: randomNumber,
       ...newcomment,
     });
     this.setState({
@@ -46,11 +49,11 @@ export default class CommentsList extends Component {
     console.log(comment);
   };
   render() {
-    const { data } = this.props;
+    const { data,topMargin } = this.props;
 
     return (
       <View style={commentListStyling.mainContainer}>
-        <FlatList
+        <FlatList style={{marginTop: topMargin,}}
           ref="flatList"
           onContentSizeChange={() => this.refs.flatList.scrollToEnd()}
           extraData={this.props}
