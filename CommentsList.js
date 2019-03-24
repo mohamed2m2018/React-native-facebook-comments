@@ -11,12 +11,11 @@ import commentListStyling from './commentListStyling';
 import propTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-
 export default class CommentsList extends Component {
   state = { text: '' };
 
   addComment = () => {
-    let { data,onAddComment } = this.props;
+    let { data, onAddComment } = this.props;
     const { text } = this.state;
     data.push({
       key: Math.random(),
@@ -37,18 +36,13 @@ export default class CommentsList extends Component {
   };
 
   displayLikeCondition = (commentId) => {
-    console.log(commentId)
-    const {data,currentUserId}=this.props;
-    let comment=data.filter(comment=>comment.id===commentId);
+    console.log(commentId);
+    const { data, currentUserId } = this.props;
+    let comment = data.filter((comment) => comment.id === commentId);
     //check if liker id equals to current user id
-    founded = comment[0].likersIds.filter((likerId) =>{
-      console.log('I am comment')
-      console.log(commentId)
-      console.log('I am liker id')
-      console.log(likerId);
-      console.log('I am  current user id')
-      console.log(currentUserId);
-      return likerId === currentUserId});
+    founded = comment[0].likersIds.filter(
+      (likerId) => likerId === currentUserId
+    );
     if (founded.length) return true;
     else return false;
   };
@@ -62,7 +56,7 @@ export default class CommentsList extends Component {
           onContentSizeChange={() => this.refs.flatList.scrollToEnd()}
           extraData={this.props}
           data={data}
-          keyExtractor={(item) => (item.id)}
+          keyExtractor={(item) => item.id}
           renderItem={(info) => (
             <Comment
               commentData={info.item}
@@ -71,9 +65,7 @@ export default class CommentsList extends Component {
           )}
         />
         <KeyboardAvoidingView behavior="padding" enabled>
-          <View
-            style={commentListStyling.textInputContainer}
-          >
+          <View style={commentListStyling.textInputContainer}>
             <TextInput
               ref="TextInput"
               onChangeText={(text) => {
@@ -99,8 +91,7 @@ export default class CommentsList extends Component {
   }
 }
 
-CommentsList.propTypes={
-
+CommentsList.propTypes = {
   commentData: propTypes.shape({
     ownerName: propTypes.string.isRequired,
     ownerAvatar: propTypes.string,
@@ -116,6 +107,5 @@ CommentsList.propTypes={
       })
     ),
   }),
-  onAddComment:propTypes.func,
-
-}
+  onAddComment: propTypes.func,
+};
