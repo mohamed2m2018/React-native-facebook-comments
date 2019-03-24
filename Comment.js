@@ -55,13 +55,13 @@ export default class Comment extends Component {
 
           {liked ? (
             <TouchableOpacity onPress={this.onPressLike}>
-            <View>
+            <View style={{paddingRight:5,paddingLeft:5}}>
               <Text style={commentStyling.footerElementLiked}>Like</Text>
               </View>
             </TouchableOpacity>
           ) : (
             <TouchableOpacity onPress={this.onPressLike}>
-            <View>
+            <View style={{paddingRight:4,paddingLeft:4}}>
               <Text style={commentStyling.footerElement}>Like</Text>
               </View>
             </TouchableOpacity>
