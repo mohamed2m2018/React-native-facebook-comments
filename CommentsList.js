@@ -7,8 +7,10 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 import Comment from './Comment';
-import commentListStyling from './commentListStyling'
-import Icon from 'react-native-vector-icons/AntDesign';
+import commentListStyling from './commentListStyling';
+import propTypes from 'prop-types';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
 
 export default class CommentsList extends Component {
   state = { text: '' };
@@ -48,6 +50,7 @@ export default class CommentsList extends Component {
           onContentSizeChange={() => this.refs.flatList.scrollToEnd()}
           extraData={this.props}
           data={data}
+          keyExtractor={(item) => (item.id)}
           renderItem={(info) => (
             <Comment
               commentData={info.item.commentData}
@@ -72,8 +75,8 @@ export default class CommentsList extends Component {
             <TouchableOpacity onPress={this.addComment}>
               <Icon
                 style={commentListStyling.icon}
-                name="caretright"
-                size={35}
+                name="send"
+                size={30}
                 color="#3179E8"
               />
             </TouchableOpacity>
@@ -84,3 +87,23 @@ export default class CommentsList extends Component {
   }
 }
 
+CommentsList.propTypes={
+
+  commentData: propTypes.shape({
+    ownerName: propTypes.string.isRequired,
+    ownerAvatar: propTypes.string,
+    content: propTypes.string.isRequired,
+    date: propTypes.string,
+    liked: propTypes.bool,
+    replies: propTypes.arrayOf(
+      propTypes.shape({
+        ownerName: propTypes.string,
+        ownerAvatar: propTypes.string,
+        content: propTypes.string.isRequired,
+        date: propTypes.string,
+      })
+    ),
+  }),
+  onAddComment:propTypes.bool,
+
+}

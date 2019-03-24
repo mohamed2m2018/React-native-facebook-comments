@@ -1,20 +1,12 @@
 import React from 'react';
-import {
-  StyleSheet,
-  TextInput,
-  View,
-  Button,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import CommentsList from './CommentsList';
-import { KeyboardAvoidingView } from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
 
 export default class App extends React.Component {
   state = {
     data: [
       {
-        key: '1',
+        id: '1',
         commentData: {
           ownerName: 'Mohamed Salah',
           ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
@@ -24,7 +16,7 @@ export default class App extends React.Component {
         },
       },
       {
-        key: '2',
+        id: '2',
         commentData: {
           ownerName: 'Mohamed Salah',
           ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
@@ -32,7 +24,7 @@ export default class App extends React.Component {
             'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
           date: '13h ',
 
-          replies: [
+          /*replies: [
             {
               ownerName: 'Mohamed Salah',
               ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
@@ -61,7 +53,7 @@ export default class App extends React.Component {
                 'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
               date: '13h ',
             },
-          ],
+          ],*/
         },
       },
     ],
@@ -71,7 +63,12 @@ export default class App extends React.Component {
     const { data } = this.state;
     return (
       <View style={styles.container}>
-        <CommentsList data={data} />
+        <CommentsList 
+        data={data}
+        onAddComment
+        DisplayMyLikeCondition
+
+        />
       </View>
     );
   }
