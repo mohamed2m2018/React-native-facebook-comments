@@ -19,7 +19,7 @@ export default (styles = StyleSheet.create({
     marginBottom: 5,
     fontSize: 15,
   },
-  icon: { marginTop: 14, marginLeft: 3, marginRight: 7 },
+  icon: { marginTop: 14, marginLeft: 5, marginRight: 7 },
   textInputContainer: {
     flexDirection: 'row',
     borderColor: '#000',

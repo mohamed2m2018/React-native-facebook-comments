@@ -7,22 +7,25 @@ export default class App extends React.Component {
     data: [
       {
         id: '1',
-        commentData: {
+ 
           ownerName: 'Mohamed Salah',
           ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
           content:
             'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
           date: '13h ',
-        },
+          likersIds:['1','2','3']
+     
       },
       {
         id: '2',
-        commentData: {
+      
           ownerName: 'Mohamed Salah',
           ownerAvatar: 'https://i.imgur.com/2FXmVPb.jpg',
           content:
             'hi, I am salah,hi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salahhi, I am salah',
           date: '13h ',
+          likersIds:['2','3'],
+
 
           /*replies: [
             {
@@ -55,7 +58,7 @@ export default class App extends React.Component {
             },
           ],*/
         },
-      },
+    
     ],
   };
 
@@ -65,8 +68,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <CommentsList 
         data={data}
-        onAddComment
-        DisplayMyLikeCondition
+        onAddComment={()=>console.log('Comment Added')}
+        currentUserId='1'
 
         />
       </View>

@@ -16,7 +16,7 @@ export default class CommentsList extends Component {
   state = { text: '' };
 
   addComment = () => {
-    let { data } = this.props;
+    let { data,onAddComment } = this.props;
     const { text } = this.state;
     data.push({
       key: Math.random(),
@@ -32,11 +32,23 @@ export default class CommentsList extends Component {
     });
 
     this.refs.TextInput.clear();
+
+    onAddComment();
   };
 
-  displayLikeCondition = (likersArray) => {
+  displayLikeCondition = (commentId) => {
+    console.log(commentId)
+    const {data,currentUserId}=this.props;
+    let comment=data.filter(comment=>comment.id===commentId);
     //check if liker id equals to current user id
-    founded = likersArray.filter((liker) => liker === 1);
+    founded = comment[0].likersIds.filter((likerId) =>{
+      console.log('I am comment')
+      console.log(commentId)
+      console.log('I am liker id')
+      console.log(likerId);
+      console.log('I am  current user id')
+      console.log(currentUserId);
+      return likerId === currentUserId});
     if (founded.length) return true;
     else return false;
   };
@@ -53,8 +65,8 @@ export default class CommentsList extends Component {
           keyExtractor={(item) => (item.id)}
           renderItem={(info) => (
             <Comment
-              commentData={info.item.commentData}
-              displayLike={false}
+              commentData={info.item}
+              displayLike={this.displayLikeCondition(info.item.id)}
             />
           )}
         />
@@ -104,6 +116,6 @@ CommentsList.propTypes={
       })
     ),
   }),
-  onAddComment:propTypes.bool,
+  onAddComment:propTypes.func,
 
 }
