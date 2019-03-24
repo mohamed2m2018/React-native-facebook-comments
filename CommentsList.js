@@ -45,10 +45,10 @@ export default class CommentsList extends Component {
     let comment = data.filter((comment) => comment.id === commentId);
     //check if liker id equals to current user id
     let founded = comment[0].likersIds.filter((likerId) => likerId === currentUserId);
-    
+
     if (founded.length) return true;
     else return false;
-  };
+ 
   };
   render() {
     const { data,topMargin } = this.props;
