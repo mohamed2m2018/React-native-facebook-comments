@@ -9,7 +9,7 @@ import {
 import Comment from './Comment';
 import commentListStyling from './commentListStyling';
 import propTypes from 'prop-types';
-import sendIcon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 
@@ -82,7 +82,7 @@ export default class CommentsList extends Component {
               placeholder="Write a comment.."
             />
             <TouchableOpacity onPress={this.addComment}>
-              <sendIcon
+              <Icon
                 style={commentListStyling.icon}
                 name="send"
                 size={30}
