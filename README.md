@@ -5,6 +5,7 @@ Implementing facebook alike comments using react native (still working on it)
 Things not done yet:
 
 1-displaying number of likes.
+
 2-Adding logic to replies
 
 To do :
