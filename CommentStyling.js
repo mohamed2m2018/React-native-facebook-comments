@@ -30,11 +30,11 @@ export default (styles = StyleSheet.create({
   },
 
   content: {
-    padding: 10,
-    paddingTop: 2,
+    padding: 6,
+    paddingTop: 1,
   },
   commentOwner: {
-    padding: 10,
+    padding: 6,
     paddingBottom: 0,
     fontWeight: 'bold',
   },
@@ -51,7 +51,7 @@ export default (styles = StyleSheet.create({
 
   },
   footerElement: {
-    marginRight: 10,
+    marginRight: 14,
     
   },
   footerElementLiked:{
