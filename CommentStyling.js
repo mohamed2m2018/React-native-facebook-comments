@@ -22,7 +22,7 @@ export default (styles = StyleSheet.create({
   },
 
   wrapper: {
-    flex: 1,
+    flex: -1,
     height: 'auto',
     backgroundColor: '#F2F3F5',
     borderRadius: 15,

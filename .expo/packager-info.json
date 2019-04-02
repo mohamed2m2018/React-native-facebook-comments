@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19002,
-  "expoServerPort": 19000,
+  "devToolsPort": 19003,
+  "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": "https://6w-eic.anonymous.react-native-comments-salah.exp.direct",
-  "packagerNgrokUrl": "https://packager.6w-eic.anonymous.react-native-comments-salah.exp.direct",
-  "ngrokPid": 6492
+  "expoServerNgrokUrl": "https://6w-eic.mohamed2m2013.react-native-facebook-comments.exp.direct",
+  "packagerNgrokUrl": "https://packager.6w-eic.mohamed2m2013.react-native-facebook-comments.exp.direct",
+  "ngrokPid": 11932
 }
