@@ -1,9 +1,28 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import CommentsList from './CommentsList';
+import NewCommentInput from './NewCommentInput';
 
 export default class App extends React.Component {
+  onAddComment = (newComment) => {
+    let { data } = this.state;
+    const randomNumber = `${Math.floor(Math.random() * 1000) +
+      Math.floor(Math.random() * 1000) +
+      10}`;
+
+    data.push({
+      id: randomNumber,
+      ...newComment,
+    });
+
+    this.setState(data);
+
+    console.log('hello world ')
+
+  };
+
   state = {
+    text: '',
     data: [
       {
         id: '1',
@@ -73,6 +92,8 @@ export default class App extends React.Component {
             avatar: 'https://i.imgur.com/2FXmVPb.jpg',
           }}
         />
+
+        <NewCommentInput onAddComment={this.onAddComment} />
       </View>
     );
   }
